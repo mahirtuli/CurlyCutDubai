@@ -203,3 +203,51 @@ footer {
 footer p {
   margin-bottom:0.5rem;
 }
+/* ===== Responsive Tweaks ===== */
+@media (max-width: 768px) {
+  /* NAV: stack links below the logo */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* HERO: shorter on mobile */
+  .hero {
+    height: 60vh;
+    padding: 2rem 1rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.2;
+  }
+
+  /* SECTION HEADINGS */
+  .section h2 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  /* GRIDS → single column */
+  .about,
+  .services-grid,
+  .gallery-grid,
+  .testimonial-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* SERVICE CARDS & GALLERY IMAGES full‑width */
+  .service-card,
+  .gallery-grid img {
+    width: 100%;
+  }
+
+  /* REDUCE PADDING */
+  .section {
+    padding: 2rem 1rem;
+  }
+}
